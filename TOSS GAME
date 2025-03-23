@@ -1,0 +1,35 @@
+# MY GANME CODE
+import random
+option=['heads','tails']
+player_A_choice=input("enter your choice: ")
+coin_toss=random.choice(option)
+print(coin_toss)
+if player_A_choice==coin_toss:
+    print("player A gets to choose")
+else:
+    print("player B gets to choose")
+# CHATGPT IMPROVED CODE
+  import random
+
+def coin_toss_game():
+    options = ['heads', 'tails']
+    
+    # Get user input with validation
+    while True:
+        player_A_choice = input("Enter your choice (heads/tails): ").strip().lower()
+        if player_A_choice in options:
+            break
+        print("Invalid choice! Please enter 'heads' or 'tails'.")
+
+    # Simulate the coin toss
+    coin_toss = random.choice(options)
+    print(f"The coin landed on: {coin_toss}")
+
+    # Determine the winner
+    if player_A_choice == coin_toss:
+        print("Player A gets to choose!")
+    else:
+        print("Player B gets to choose!")
+
+# Run the game
+coin_toss_game()
